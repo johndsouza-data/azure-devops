@@ -7,7 +7,7 @@ trigger:
 - dev
 
 pool:
-  name: "OG-AGENTPOOL"
+  name: "OG-AGENTPOOL2"
   vmImage: ubuntu-latest
 
 steps:

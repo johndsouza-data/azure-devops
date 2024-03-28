@@ -12,11 +12,14 @@ pool:
   
 stages:
 - stage: Build
+  variables:
+    environment: Dev
   jobs:
   - job: BuildJob
     steps:
     - bash: echo "Do the build"
 - stage: DevDeploy
+  
   jobs:
   - deployment: DevDeployJob
     environment: Dev

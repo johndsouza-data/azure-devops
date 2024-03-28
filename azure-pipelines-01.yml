@@ -13,24 +13,11 @@ pool:
 stages:
 - stage: Build
   jobs:
-  - job:
+  - job: FirstJob
     steps:
-    - bash: echo "Buid is starting"
-- stage: DevDeploy
+    - bash: echo "First job is in build stage"
+- stage: DeployDev
   jobs:
-  - deployment: DevDeployJob
-    environment: Dev
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: echo deploy to Dev
-- stage: QADeploy
-  jobs:
-  - deployment: QADeployJob
-    environment: QA
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: echo deploy to QA
+  - job: DeployDevJob
+    steps:
+    - bash: echo "First job in Dev Deploy"

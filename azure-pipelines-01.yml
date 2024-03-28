@@ -7,7 +7,7 @@ trigger:
 - dev
 
 pool:
-  name: "OM-6"
+  name: "AP9"
   vmImage: ubuntu-latest
 
 steps:

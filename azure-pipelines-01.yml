@@ -7,7 +7,7 @@ trigger:
 - dev
 
 pool:
-  name: "OG_A_Pool_3"
+  name: "OM-6"
   vmImage: ubuntu-latest
 
 steps:

@@ -18,10 +18,10 @@ stages:
     - bash: echo "First job is in build stage"
 - stage: DeployDev
   jobs:
-- deployment: DevDeployJob
-    environment: Dev
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: echo deploy to Dev
+  - deployment: DevDeployJob
+      environment: Dev
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - script: echo deploy to Dev
